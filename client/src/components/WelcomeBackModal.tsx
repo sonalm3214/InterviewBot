@@ -12,7 +12,8 @@ interface WelcomeBackModalProps {
 
 export default function WelcomeBackModal({ onContinue, onStartFresh }: WelcomeBackModalProps) {
   const dispatch = useDispatch();
-  const { showWelcomeBack, currentCandidate } = useSelector((state: RootState) => state.interview);
+  const showWelcomeBack = useSelector((state: RootState) => state.interview.showWelcomeBack);
+  const currentCandidate = useSelector((state: RootState) => state.interview.currentCandidate);
 
   const handleContinue = () => {
     dispatch(setShowWelcomeBack(false));

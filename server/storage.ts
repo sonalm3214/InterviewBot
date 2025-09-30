@@ -63,6 +63,9 @@ export class MemStorage implements IStorage {
   async createCandidate(insertCandidate: InsertCandidate): Promise<Candidate> {
     const id = randomUUID();
     const candidate: Candidate = {
+      summary: null,
+      score: null,
+      currentQuestionIndex: null,
       ...insertCandidate,
       id,
       startedAt: new Date(),
@@ -127,14 +130,17 @@ export class MemStorage implements IStorage {
     const candidate = this.candidates.get(candidateId);
     if (!candidate) return undefined;
 
+    const questionIndex = candidate.currentQuestionIndex ?? 0;
     return Array.from(this.questions.values()).find(
-      q => q.candidateId === candidateId && q.questionIndex === candidate.currentQuestionIndex
+      q => q.candidateId === candidateId && q.questionIndex === questionIndex
     );
   }
 
   async createAnswer(insertAnswer: InsertAnswer): Promise<Answer> {
     const id = randomUUID();
     const answer: Answer = {
+      score: null,
+      timeSpent: null,
       ...insertAnswer,
       id,
       submittedAt: new Date(),
@@ -156,6 +162,8 @@ export class MemStorage implements IStorage {
   async createChatMessage(insertMessage: InsertChatMessage): Promise<ChatMessage> {
     const id = randomUUID();
     const message: ChatMessage = {
+      metadata: null,
+      messageType: null,
       ...insertMessage,
       id,
       createdAt: new Date(),

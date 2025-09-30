@@ -19,7 +19,8 @@ interface InterviewChatProps {
 
 export default function InterviewChat({ candidateId }: InterviewChatProps) {
   const dispatch = useDispatch();
-  const { currentCandidate, timerState } = useSelector((state: RootState) => state.interview);
+  const currentCandidate = useSelector((state: RootState) => state.interview.currentCandidate);
+  const timerState = useSelector((state: RootState) => state.interview.timerState);
   const [answer, setAnswer] = useState('');
   const [missingInfo, setMissingInfo] = useState<{ [key: string]: string }>({});
   const [isPaused, setIsPaused] = useState(false);

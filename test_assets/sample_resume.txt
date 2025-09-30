@@ -1,0 +1,28 @@
+John Smith
+john.smith@email.com
++1 (555) 123-4567
+
+PROFESSIONAL SUMMARY
+Experienced Full Stack Developer with 5+ years of expertise in React and Node.js development.
+
+SKILLS
+- Frontend: React, TypeScript, JavaScript, HTML, CSS
+- Backend: Node.js, Express, REST APIs
+- Database: PostgreSQL, MongoDB
+- Tools: Git, Docker, AWS
+
+EXPERIENCE
+Senior Full Stack Developer
+Tech Company Inc. | 2020 - Present
+- Built scalable web applications using React and Node.js
+- Implemented RESTful APIs and microservices architecture
+- Mentored junior developers and conducted code reviews
+
+Full Stack Developer
+StartupXYZ | 2018 - 2020
+- Developed responsive web applications
+- Optimized application performance and user experience
+
+EDUCATION
+Bachelor of Science in Computer Science
+University of Technology | 2014 - 2018

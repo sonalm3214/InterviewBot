@@ -77,9 +77,9 @@ export default function InterviewerDashboard() {
     );
   };
 
-  const getProgressPercentage = (status: string, currentQuestionIndex: number = 0) => {
+  const getProgressPercentage = (status: string, currentQuestionIndex: number | null = 0) => {
     if (status === 'completed') return 100;
-    return Math.round((currentQuestionIndex / 6) * 100);
+    return Math.round(((currentQuestionIndex || 0) / 6) * 100);
   };
 
   const renderStars = (score?: number) => {

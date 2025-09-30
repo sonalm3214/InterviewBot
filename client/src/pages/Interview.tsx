@@ -11,7 +11,9 @@ import WelcomeBackModal from '@/components/WelcomeBackModal';
 
 export default function Interview() {
   const dispatch = useDispatch();
-  const { activeTab, currentCandidate, lastActivity } = useSelector((state: RootState) => state.interview);
+  const activeTab = useSelector((state: RootState) => state.interview.activeTab);
+  const currentCandidate = useSelector((state: RootState) => state.interview.currentCandidate);
+  const lastActivity = useSelector((state: RootState) => state.interview.lastActivity);
   const [candidateId, setCandidateId] = useState<string | null>(null);
 
   // Check for incomplete sessions on mount

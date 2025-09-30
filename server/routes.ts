@@ -183,7 +183,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       });
 
       // Move to next question or complete interview
-      const nextQuestionIndex = candidate.currentQuestionIndex + 1;
+      const nextQuestionIndex = (candidate.currentQuestionIndex || 0) + 1;
       
       if (nextQuestionIndex >= 6) {
         // Interview completed - generate final summary

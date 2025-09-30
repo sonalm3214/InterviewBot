@@ -67,7 +67,7 @@ export default function CandidateDetailModal({ candidate, onClose }: CandidateDe
     }
   };
 
-  const formatDuration = (startTime?: Date, endTime?: Date) => {
+  const formatDuration = (startTime?: Date | null, endTime?: Date | null) => {
     if (!startTime) return 'Not started';
     if (!endTime) return 'In progress';
     

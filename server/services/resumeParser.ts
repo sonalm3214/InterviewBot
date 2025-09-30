@@ -1,4 +1,6 @@
-import * as pdfParse from "pdf-parse";
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const pdfParse = require('pdf-parse/lib/pdf-parse.js');
 
 export interface ResumeData {
   name?: string;
@@ -33,7 +35,7 @@ export async function parseResume(buffer: Buffer): Promise<ResumeData> {
     let name: string | undefined;
     
     for (const line of lines) {
-      const trimmedLine = line.trim();
+      const trimmedLine = (line as string).trim();
       // Skip lines that are clearly not names
       if (trimmedLine.includes('@') || 
           /^\d/.test(trimmedLine) || 
@@ -47,7 +49,7 @@ export async function parseResume(buffer: Buffer): Promise<ResumeData> {
       // Check if it looks like a name (2-4 words, mostly letters)
       const words = trimmedLine.split(/\s+/);
       if (words.length >= 2 && words.length <= 4) {
-        const isName = words.every(word => 
+        const isName = words.every((word: string) => 
           /^[A-Za-z]+[A-Za-z\-'\.]*$/.test(word) && word.length >= 2
         );
         if (isName) {
