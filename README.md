@@ -30,13 +30,19 @@ This ensures structured interviews, automated scoring, and a consistent experien
 
 ---
 
+## 🌍 Live Deployment
+
+Backend (Render): https://interviewbot-5611.onrender.com
+
 ## ⚙️ Tech Stack
 
-* **Frontend:** React
-* **State Management:** Redux + redux-persist (local persistence)
-* **UI Frameworks:** Ant Design / shadcn (modern, responsive design)
-* **AI Integration:** LLM for dynamic question generation, scoring, and summaries
-* **Storage:** Local Storage & IndexedDB for restoring sessions after refresh/close
+Frontend: React + Vite + TypeScript
+
+Backend: Node.js + Express
+
+Database: PostgreSQL
+
+Deployment: Render
 
 ---
 
