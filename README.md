@@ -34,6 +34,10 @@ This ensures structured interviews, automated scoring, and a consistent experien
 
 Backend (Render): https://interviewbot-5611.onrender.com
 
+## 🎥 Demo Video
+
+[![Watch the demo](https://drive.google.com/file/d/1bNGyoe-33vAlkV381ro52nImEcFjr1Uu/view?usp=sharing)
+
 ## ⚙️ Tech Stack
 
 Frontend: React + Vite + TypeScript
